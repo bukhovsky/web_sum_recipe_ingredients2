@@ -13,11 +13,16 @@ function submit() {
 </script>
 
 <template>
+
 <h1>{{ ingredients }}</h1>
 
-<p style="white-space: pre-line;">{{ recipe }}</p>
 
 <textarea v-model="recipe" @keyup="submit(message)" placeholder="add multiple lines" rows="10" cols="30"></textarea>
+
+<li v-for="item in ingredients">
+  {{ item.ingridient }}
+</li>
+
 
 </template>
 
