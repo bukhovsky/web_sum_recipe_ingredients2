@@ -14,12 +14,15 @@ function submit() {
 
 <template>
 
-<h1>Рецептный граммовычислитель</h1>
+<div class = "topline">Рецептный граммовычислитель. Inspired by<a href="https://www.instagram.com/anna__nutritionist/" class="fa fa-instagram" target="_blank"></a></div>
+<div> </div>
+
 
 <div class = "mainarea">
   
 
-<textarea v-model="recipe" @keyup="submit(message)" placeholder="добавьте рецепты" rows="10" cols="30"></textarea>
+<textarea v-model="recipe" @keyup="submit(message)" placeholder="Добавьте рецепты с ингридиентами в формате «продукт количество гр» и 
+получите суммарный список продуктов." rows="10" cols="30"></textarea>
 
 <ul>
 <li v-for="item in ingredients">
@@ -28,32 +31,48 @@ function submit() {
 </ul>
 </div>
 
-<footer>
-  My footer
-</footer>
-
 </template>
 
 <style scoped>
+*{
+  margin: 0;
+  padding: 0;
+  color: darkblue;
+}
+
+.topline {
+  margin-top: 25px;
+  font-size: 36px;
+  
+}
 .mainarea {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 500px;
   width: 100%;
   
 
 }
 
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  /* margin: 5px 2px; */
+  border-radius: 50%;
+}
 
 
 textarea {
   flex: 2;
   background-color: #dddddd;
   color: #666666;
-  padding: 1em;
-  border-radius: 10px;
-  border: 2px solid transparent;
+ padding: 0.5rem;
+   border-radius: 10px; 
+   border: 2px solid transparent; 
   outline: none;
   font-family: "Heebo", sans-serif;
   font-weight: 500;
@@ -78,24 +97,18 @@ textarea:focus {
 
 
 ul {
+  padding: 0.5rem;
   flex: 1;
  margin: 0;
- border: 1px solid black;
+  /* border: 1px solid black;  */
   height: 500px;
   /* width: 35%; */
   font-size: 16px;
 }
 
-
-  footer {
-    margin-top: 50px;
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
+li {
   
+  list-style-type: none;
 }
-
-
 
 </style>
