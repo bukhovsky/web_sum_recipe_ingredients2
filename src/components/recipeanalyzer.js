@@ -57,7 +57,7 @@ for (let z = 0; z < ingrConsolidated.length; z++) {
    uniqIngrNamesWeightsStringOb.push(tempOb)
  })    
 
-console.log(ingrNames)
+
 return uniqIngrNamesWeightsStringOb
 }
 
