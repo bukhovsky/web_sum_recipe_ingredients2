@@ -12,7 +12,7 @@ function recipeanalyzer (recipe) {
     for(let i = 0; i < arrayOfLines.length; i++) 
     {
         
-        const x = arrayOfLines[i].match(/^.+ +\d+ +гр *$/)
+        const x = arrayOfLines[i].match(/^.+ +\d+ +гр.*$/)
         if ( x != null) {
     arrayOfIngr.push(arrayOfLines[i])
         }
