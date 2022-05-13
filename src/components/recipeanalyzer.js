@@ -23,7 +23,7 @@ function recipeanalyzer (recipe) {
 for(let y = 0; y < arrayOfIngr.length; y++) {
 
 const weightStart = arrayOfIngr[y].search(/\d+ +гр/)   
-const weightEnd = arrayOfIngr[y].search(/ +гр/) 
+const weightEnd = arrayOfIngr[y].search(/\d +гр/) + 1 
 const ingrName = arrayOfIngr[y].slice(0, weightStart - 1)
 const ingrWeight = Number(arrayOfIngr[y].slice(weightStart, weightEnd))
 
